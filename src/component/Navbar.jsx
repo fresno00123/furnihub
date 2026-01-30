@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import React, { useState } from 'react';
+import React, { useState, useRef,useEffect} from 'react';
 import {
   Armchair,
   Check,
@@ -11,11 +11,14 @@ import {
 import Authlogin from './Authlogin';
 import { IoCartOutline } from 'react-icons/io5';
 import { useCart } from '../context/CartContext';
-import { Link, NavLink, useNavigate } from 'react-router';
+import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useSearch } from '../context/SearchContext';
 import { products } from '../Data/products';
+import { use } from 'react';
 
 function Navbar() {
+  const[open,setOpen]=useState(false);
+  const menuRef=useRef(null);
   const { setQuery } = useSearch();
   const navigate = useNavigate();
   const { cartCount } = useCart();
@@ -24,7 +27,16 @@ function Navbar() {
   const [searchTerm, setSearchTerm] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+// Close menu when clicking outside
+  useEffect(() => {
+    function handleClickOutside(e) {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
   /* ================= SEARCH HANDLERS ================= */
 
   // When typing
@@ -47,23 +59,22 @@ function Navbar() {
   };
 
   // When searching (Enter / click / suggestion)
- const handleSearch = (value) => {
-  const exactMatch = products.find(p => p.name === value);
-  if (exactMatch) {
-    setQuery(exactMatch.name); // or save entire product if needed
+  const handleSearch = (value) => {
+    if (!value.trim()) return;
+
+    setQuery(value);
     navigate("/search");
     setSuggestions([]);
-  }
-};
+  };
 
   return (
     <>
       {/* ================= TOP NAV ================= */}
-      <div className="bg-[#272343] h-[45px] flex justify-center px-4">
+      <div className="bg-[#272343] h-11.25 flex justify-center px-4">
         <div className="w-full max-w-7xl flex justify-between items-center">
           <p className="flex items-center gap-2 text-sm text-white">
             <Check size={16} />
-            {t("Free on all orders over $50")}
+            {t("Freeshipping")}
           </p>
 
           <div className="hidden sm:flex items-center gap-4">
@@ -117,95 +128,149 @@ function Navbar() {
             <input
               type="text"
               placeholder={t("search")}
-              className="w-full bg-white rounded-lg pl-4 pr-10 h-[44px]"
+              className="w-full bg-white rounded-lg pl-4 pr-10 h-11"
               value={searchTerm}
               onChange={handleChange}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
+              onKeyDown={(e) => {if (e.key === "Enter") {
                   handleSearch(searchTerm);
                 }
               }}
             />
-            <Search
-              size={20}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 cursor-pointer"
-              onClick={() => handleSearch(searchTerm)}
-            />
+<Search
+              size={20}
+              className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 cursor-pointer"
+              onClick={() => handleSearch(searchTerm)}
+            />
 
-            {/* ===== Suggestions ===== */}
-        
-{suggestions.length > 0 && (
-  <ul className='absolute top-full left-0 w-full bg-white shadow-md rounded-md z-50'>
-    {suggestions.map((item) => (
-      <li 
-        key={item.id}
-        className='px-4 py-2 hover:bg-gray-100 cursor-pointer'
-        onClick={() => handleSearch(item.name)}
+            {/* ===== Suggestions ===== */}
+            {suggestions.length > 0 && (
+              <ul className="absolute top-full left-0 w-full bg-white shadow-md rounded-md z-50">
+                {suggestions.map((item) => (
+                  <li
+                    key={item.id}
+                    className="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                    onClick={() => handleSearch(item.name)}
+                  >
+                    {item.name}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* ================= BOTTOM NAV ================= */}
+      <div className="bg-white border-b relative">
+        <div className="max-w-7xl mx-auto h-17.5 px-4 flex items-center justify-between">
+
+          {/* Left */}
+          <div className="relative" ref={menuRef}>
+      {/* Button */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="flex items-center gap-2 px-4 py-2 border text-white bg-[#029fae] rounded hover:bg-gray-400"
       >
-        {item.name}  {/* <-- show the actual product name */}
-      </li>
-    ))}
-  </ul>
-)}
-          </div>
-        </div>
-      </div>
+        <Menu size={18} color="white"/>
+        All Categories
+      </button>
 
-      {/* ================= BOTTOM NAV ================= */}
-      <div className="bg-white border-b relative">
-        <div className="max-w-7xl mx-auto h-[70px] px-4 flex items-center justify-between">
+      {/* Dropdown */}
+      {open && (
+        <ul className="absolute left-0 mt-2 w-44 bg-white border rounded shadow flex flex-col">
+          <li>
+            <NavLink className="block px-4 py-2 hover:bg-gray-100" to="/chair">
+              Chair
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="block px-4 py-2 hover:bg-gray-100" to="/table">
+              Table
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="block px-4 py-2 hover:bg-gray-100" to="/sofa">
+              Sofa
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="block px-4 py-2 hover:bg-gray-100" to="/bed">
+              Bed
+            </NavLink>
+          </li>
+          <li>
+            <NavLink className="block px-4 py-2 hover:bg-gray-100" to="/light">
+              Light
+            </NavLink>
+          </li>
+        </ul>
+      )}
+    </div>
 
-          {/* Left */}
-          <div className="flex items-center gap-4">
-            <div className="dropdown">
-              <div tabIndex={0} role="button" className="btn flex gap-2 capitalize">
-                <Menu size={18} />
-                {t("allCategories")}
-              </div>
-              <ul className="menu dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-44 z-10">
-                <NavLink to="/chair">Chair</NavLink>
-                <NavLink to="/table">Table</NavLink>
-                <NavLink to="/sofa">Sofa</NavLink>
-                <NavLink to="/bed">Bed</NavLink>
-                <NavLink to="/light">Light</NavLink>
-              </ul>
-            </div>
 
-            <nav className="hidden lg:flex gap-8">
-              <NavLink to="/">Home</NavLink>
-              <NavLink to="/about">About</NavLink>
-              <NavLink to="/shop">Shop</NavLink>
-              <NavLink to="/product">Product</NavLink>
-            </nav>
-          </div>
+          {/* Right */}
+          <p className="hidden sm:block text-sm">
+            Contact: <span className="text-[#272343]">08141301153</span>
+          </p>
+        {/* Center - Desktop Nav */}
+<nav className="hidden lg:flex items-center gap-6">
+  <NavLink
+    to="/"
+    className={({ isActive }) =>
+   `text-sm font-medium ${isActive ? "text-[#029fae]" : "hover:text-[#029fae]"}`}
+  >
+    Home
+  </NavLink>
 
-          {/* Right */}
-          <p className="hidden sm:block text-sm text-[#636270]">
-            Contact: <a href="tel:+2348141301153" className='text-[#272343]'>08141301153</a>
-          </p>
+  <NavLink
+    to="/about"
+    className={({ isActive }) =>
+   `text-sm font-medium ${isActive ? "text-[#029fae]" : "hover:text-[#029fae]"}`}
+  >
+    About
+  </NavLink>
 
-          {/* Mobile menu */}
-          <button
-            className="lg:hidden btn"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            <Menu />
-          </button>
-        </div>
+  <NavLink
+    to="/shop"
+     className={({ isActive }) =>
+   `text-sm font-medium ${isActive ? "text-[#029fae]" : "hover:text-[#029fae]"}`}
+  >
+    Shop
+  </NavLink>
 
-        {mobileMenuOpen && (
-          <div className="lg:hidden absolute top-[70px] left-0 w-full bg-white shadow-md z-50">
-            <nav className="flex flex-col gap-4 p-4">
-              <NavLink to="/" onClick={() => setMobileMenuOpen(false)}>Home</NavLink>
-              <NavLink to="/about" onClick={() => setMobileMenuOpen(false)}>About</NavLink>
-              <NavLink to="/shop" onClick={() => setMobileMenuOpen(false)}>Shop</NavLink>
-              <NavLink to="/product" onClick={() => setMobileMenuOpen(false)}>Product</NavLink>
-            </nav>
-          </div>
-        )}
-      </div>
-    </>
-  );
+  <NavLink
+    to="/product"
+   className={({ isActive }) =>
+   `: text-sm font-medium ${
+      isActive ? "text-[#029fae]" : "hover:text-[#029fae]"
+    }`
+  }
+  >
+    Product
+  </NavLink>
+</nav>
+          {/* Mobile menu */}
+          <button
+            className="lg:hidden btn"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            <Menu />
+          </button>
+        </div>
+
+        {mobileMenuOpen && (
+          <div className="lg:hidden absolute top-17.5 left-0 w-full bg-white shadow-md z-50">
+            <nav className="flex flex-col gap-4 p-4">
+              <NavLink to="/" onClick={() => setMobileMenuOpen(false)}>Home</NavLink>
+              <NavLink to="/about" onClick={() => setMobileMenuOpen(false)}>About</NavLink>
+              <NavLink to="/shop" onClick={() => setMobileMenuOpen(false)}>Shop</NavLink>
+              <NavLink to="/product" onClick={() => setMobileMenuOpen(false)}>Product</NavLink>
+            </nav>
+          </div>
+        )}
+      </div>
+    </>
+  );
 }
 
 export default Navbar;

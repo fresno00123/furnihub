@@ -1,6 +1,6 @@
 import './App.css'
 import { useState } from 'react';
-import {BrowserRouter, Route, Routes } from "react-router";
+import {BrowserRouter, Route, Routes } from "react-router-dom";
 import Navbar from './component/Navbar';
 import Footer from './component/Footer';
 import Home from './pages/Home/Home';
@@ -21,10 +21,20 @@ import Table from './categories/Table';
 import Sofa from './categories/Sofa';
 import Bed from './categories/Bed';
 import Light from './categories/Light';
+ import { useAuth0 } from '@auth0/auth0-react';
 const App= () => {    
+    // const{ isAuthenticated, isLoading, user} = useAuth0();
+    // if (isLoading) {
+    //   return <div>Loading...</div>;
+    // }
   return (
 
         <>
+        {/* {isAuthenticated ? (
+          <h1 className="p-4 text-green-600">Welcome, {user.name}!</h1>
+        ) : (
+          <h1 className="p-4 text-red-600">You are not logged in.</h1>
+        )} */}
         <BrowserRouter>
             
             <Navbar />
