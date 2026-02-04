@@ -1,15 +1,20 @@
-import { useLocation ,Navigate} from "react-router-dom";
+import { useLocation, Navigate } from "react-router-dom";
 
-const Authcheck=({children}) => {
+const Authcheck = ({ children }) => {
   const isAuthenticate = true;
   const location = useLocation();
-   
-  if (!isAuthenticate){
-    return <Navigate to ='/auth/login' state={{
-        from :location
-    }}/>
+
+  if (!isAuthenticate) {
+    return (
+      <Navigate
+        to="/auth/login"
+        state={{
+          from: location,
+        }}
+      />
+    );
   }
   return children;
-}
+};
 
-export default Authcheck
+export default Authcheck;
