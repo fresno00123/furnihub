@@ -9,29 +9,30 @@ const Features = () => {
   const {addToCart} = useCart();
   const features = [
     {
-      title: 'library stool',
-      status: 'New',
-      price: '$250',
-      image: '/src/assets/features/product_1.png',
+            title: 'Modern Pendant Light',
+            status: 'Sales',
+            price: '$120',
+            image: '/src/assets/Banner/17.jpg',
       currentPrice: '$200',
     },
     {
-      title: 'library stool Chair',
-      status: 'Sales',
-      price: '$250',
-      image: '/src/assets/features/product_2.png',
+            title: 'Glass Center Table',
+            status: 'Sales',
+            price: '$260',
+            image: '/src/assets/Banner/5.jpg',
     },
     {
-      title: 'library stool Chair',
-      price: '$250',
-      image: '/src/assets/features/product_3.png',
+          title: 'Round Dining Table',
+            status: 'Sales',
+            price: '$390',
+            image: "/src/assets/Banner/6.jpg",
     },
     {
-      title: 'library stool Chair',
-      status: 'New',
-      price: '$250',
-      image: '/src/assets/features/product_4.png',
-      currentPrice: '$200',
+            title: 'Minimal Wooden Bed',
+            status: 'Sales',
+            price: '$550',
+            image: '/src/assets/Banner/72.jpg',
+      currentPrice: '$520',
     },
   ];
 
