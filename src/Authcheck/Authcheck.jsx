@@ -1,4 +1,4 @@
-import { useLocation ,Navigate} from "react-router";
+import { useLocation ,Navigate} from "react-router-dom";
 
 const Authcheck=({children}) => {
   const isAuthenticate = true;

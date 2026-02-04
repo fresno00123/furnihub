@@ -3,6 +3,12 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { MoveRight } from "lucide-react";
 
+import banner1 from '/src/assets/Banner/banner_image.png';
+import banner2 from '/src/assets/Banner/h.jpg';
+import banner3 from '/src/assets/Banner/p.jpg';
+import banner4 from '/src/assets/Banner/q.jpg'; 
+
+
 const Banner = () => {
   
   const products = [
@@ -10,25 +16,25 @@ const Banner = () => {
       id: 1,
       title: "Best Furniture collection for your interior",
       subTitle: "welcome to chairs",
-      image: "/src/assets/Banner/banner_image.png"
+      image: banner1,
     },
     {
       id: 2,
       title: "Best Furniture collection for your interior",
       subTitle: "welcome to chairs",
-      image: "/src/assets/Banner/h.jpg"
+      image: banner2,
     },
     {
       id: 3,
       title: "Best Furniture collection for your interior",
       subTitle: "welcome to chairs",
-      image: "/src/assets/Banner/p.jpg"
+      image: banner3,
     },
     {
       id: 4,
       title: "Best Furniture collection for your interior",
       subTitle: "welcome to chairs",
-      image: "/src/assets/Banner/q.jpg"
+      image: banner4,
     },
   ]
 
