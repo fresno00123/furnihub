@@ -2,7 +2,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { MoveRight } from "lucide-react";
-
+import { Link } from "react-router-dom"
 import banner1 from '/src/assets/Banner/banner_image.png';
 import banner2 from '/src/assets/Banner/h.jpg';
 import banner3 from '/src/assets/Banner/p.jpg';
@@ -69,11 +69,13 @@ const Banner = () => {
                   <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-[#272343] leading-tight max-w-full lg:max-w-[631px] mb-6">
                     {product.title}
                   </h3>
-
+                  <Link to="/product">
                   <button className="mx-auto md:mx-0 max-w-[140px] sm:max-w-[160px] lg:max-w-[171px] w-full h-[44px] sm:h-[48px] lg:h-[52px] bg-[#029fae] rounded-lg capitalize text-white flex items-center justify-center gap-2 hover:bg-gray-400 transition">
                     shop now
+                    to
                     <MoveRight size={18} />
                   </button>
+                  </Link>
                 </div>
 
                 {/* IMAGE */}
