@@ -1,26 +1,42 @@
 import { ShoppingCart } from "lucide-react";
 import { useCart } from "../context/CartContext";
-
+import table1 from "/src/assets/Banner/1.jpg"
+import table2 from "/src/assets/Banner/2.jpg"
+import table3 from "/src/assets/Banner/3.jpg"
+import table4 from "/src/assets/Banner/4.jpg" 
+import table5 from "/src/assets/Banner/5.jpg"
+import table6 from "/src/assets/Banner/6.jpg"
+import table7 from "/src/assets/Banner/7.jpg"
+import table8 from "/src/assets/Banner/8.jpg"
+import table9 from "/src/assets/Banner/9.jpg"
+import table10 from "/src/assets/Banner/10.jpg"
+import table11 from "/src/assets/Banner/11.jpg"
+import table12 from "/src/assets/Banner/12.jpg"
+import table13 from "/src/assets/Banner/13.jpg"
+import table14 from "/src/assets/Banner/14.jpg"
+import table15 from "/src/assets/Banner/15.jpg"
+import table16 from "/src/assets/Banner/16.jpg"
+  
 const tables = [
-  { id: 101, title: "Modern Dining Table", price: "$320", image: "/src/assets/Banner/1.jpg" },
-  { id: 102, title: "Wooden Coffee Table", price: "$180", image: "/src/assets/Banner/2.jpg" },
-  { id: 103, title: "Minimal Study Table", price: "$220", image: "/src/assets/Banner/3.jpg" },
-  { id: 104, title: "Luxury Marble Table", price: "$450", image: "/src/assets/Banner/4.jpg" },
+  { id: 101, title: "Modern Dining Table", price: "$320", image: table1 },
+  { id: 102, title: "Wooden Coffee Table", price: "$180", image: table2 },
+  { id: 103, title: "Minimal Study Table", price: "$220", image: table3 },
+  { id: 104, title: "Luxury Marble Table", price: "$450", image: table4 },
 
-  { id: 105, title: "Glass Center Table", price: "$260", image: "/src/assets/Banner/5.jpg" },
-  { id: 106, title: "Round Dining Table", price: "$390", image: "/src/assets/Banner/6.jpg" },
-  { id: 107, title: "Foldable Study Table", price: "$200", image: "/src/assets/Banner/7.jpg" },
-  { id: 108, title: "Classic Wooden Table", price: "$310", image: "/src/assets/Banner/8.jpg" },
+  { id: 105, title: "Glass Center Table", price: "$260", image: table5 },
+  { id: 106, title: "Round Dining Table", price: "$390", image: table6 },
+  { id: 107, title: "Foldable Study Table", price: "$200", image: table7 },
+  { id: 108, title: "Classic Wooden Table", price: "$310", image: table8 },
 
-  { id: 109, title: "Office Work Desk", price: "$280", image: "/src/assets/Banner/9.jpg" },
-  { id: 110, title: "Compact Laptop Table", price: "$160", image: "/src/assets/Banner/10.jpg" },
-  { id: 111, title: "Industrial Style Table", price: "$340", image: "/src/assets/Banner/11.jpg" },
-  { id: 112, title: "Luxury Conference Table", price: "$620", image: "/src/assets/Banner/12.jpg" },
+  { id: 109, title: "Office Work Desk", price: "$280", image: table9 },
+  { id: 110, title: "Compact Laptop Table", price: "$160", image: table10 },
+  { id: 111, title: "Industrial Style Table", price: "$340", image: table11 },
+  { id: 112, title: "Luxury Conference Table", price: "$620", image: table12 },
 
-  { id: 113, title: "Scandinavian Table", price: "$370", image: "/src/assets/Banner/13.jpg" },
-  { id: 114, title: "Minimal Side Table", price: "$140", image: "/src/assets/Banner/14.jpg" },
-  { id: 115, title: "Marble Coffee Table", price: "$420", image: "/src/assets/Banner/15.jpg" },
-  { id: 116, title: "Glass Dining Table", price: "$510", image: "/src/assets/Banner/16.jpg" },
+  { id: 113, title: "Scandinavian Table", price: "$370", image: table13 },
+  { id: 114, title: "Minimal Side Table", price: "$140", image: table14 },
+  { id: 115, title: "Marble Coffee Table", price: "$420", image: table15 },
+  { id: 116, title: "Glass Dining Table", price: "$510", image: table16 },
 
 
 ];

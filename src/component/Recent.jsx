@@ -4,34 +4,38 @@ import Slider from "react-slick";
 import { ShoppingCart } from "lucide-react";
 import SectionTitle from "./SectionTitle";
 import { useCart } from "../context/CartContext";
-
+import featur1 from "/src/assets/Banner/61.jpg"
+import featur2 from "/src/assets/Banner/31.jpg"
+import featur3 from "/src/assets/Banner/37.jpg"
+import featur4 from "/src/assets/Banner/7.jpg" 
 const Recent = () => {
   const { addToCart } = useCart();
 
   const features = [
     {
-      title: "library stool",
+      title: "Storage Bed",
       status: "New",
-      price: "$250",
-      image: "/src/assets/features/product_1.png",
-      currentPrice: "$200",
+      price: "$650",
+      image: featur1,
+      currentPrice: "$690",
     },
     {
-      title: "library stool Chair",
+      title: "Outdoor Garden Light",
       status: "Sales",
-      price: "$250",
-      image: "/src/assets/features/product_2.png",
+      price: "$170",
+      image: featur2,
     },
     {
-      title: "library stool Chair",
-      price: "$250",
-      image: "/src/assets/features/product_3.png",
-    },
-    {
-      title: "library stool Chair",
+      title: "Modern Fabric Sofa",
       status: "New",
-      price: "$250",
-      image: "/src/assets/features/product_4.png",
+      price: "$380",
+      image: featur3,
+    },
+    {
+      title: "Foldable Study Table",
+      status: "New",
+      price: "$200",
+      image: featur4,
       currentPrice: "$200",
     },
   ];

@@ -1,26 +1,41 @@
 import { ShoppingCart } from "lucide-react";
 import { useCart } from "../context/CartContext";
-
+import light1 from "/src/assets/Banner/17.jpg"
+import light2 from "/src/assets/Banner/18.jpg"
+import light3 from "/src/assets/Banner/19.jpg"
+import light4 from "/src/assets/Banner/20.jpg"
+import light5 from "/src/assets/Banner/21.jpg"
+import light6 from "/src/assets/Banner/22.jpg"
+import light7 from "/src/assets/Banner/23.jpg"
+import light8 from "/src/assets/Banner/24.jpg"
+import light9 from "/src/assets/Banner/25.jpg"
+import light10 from "/src/assets/Banner/26.jpg"
+import light11 from "/src/assets/Banner/27.jpg"
+import light12 from "/src/assets/Banner/28.jpg"
+import light13 from "/src/assets/Banner/29.jpg"
+import light14 from "/src/assets/Banner/30.jpg"
+import light15 from "/src/assets/Banner/31.jpg"
+import light16 from "/src/assets/Banner/32.jpg"
 const lights = [
-  { id: 401, title: "Modern Pendant Light", price: "$120", image: "/src/assets/Banner/17.jpg" },
-  { id: 402, title: "Luxury Ceiling Light", price: "$180", image: "/src/assets/Banner/18.jpg" },
-  { id: 403, title: "Minimal Table Lamp", price: "$90", image: "/src/assets/Banner/19.jpg" },
-  { id: 404, title: "Classic Wall Sconce", price: "$110", image: "/src/assets/Banner/20.jpg" },
+  { id: 401, title: "Modern Pendant Light", price: "$120", image: light1 },
+  { id: 402, title: "Luxury Ceiling Light", price: "$180", image: light2 },
+  { id: 403, title: "Minimal Table Lamp", price: "$90", image: light3 },
+  { id: 404, title: "Classic Wall Sconce", price: "$110", image: light4 },
 
-  { id: 405, title: "Elegant Floor Lamp", price: "$160", image: "/src/assets/Banner/21.jpg" },
-  { id: 406, title: "Industrial Hanging Light", price: "$140", image: "/src/assets/Banner/22.jpg" },
-  { id: 407, title: "LED Smart Light", price: "$200", image: "/src/assets/Banner/23.jpg" },
-  { id: 408, title: "Modern Desk Lamp", price: "$75", image: "/src/assets/Banner/24.jpg" },
+  { id: 405, title: "Elegant Floor Lamp", price: "$160", image: light5 },
+  { id: 406, title: "Industrial Hanging Light", price: "$140", image: light6 },
+  { id: 407, title: "LED Smart Light", price: "$200", image: light7 },
+  { id: 408, title: "Modern Desk Lamp", price: "$75", image: light8 },
 
-  { id: 409, title: "Scandinavian Pendant Lamp", price: "$150", image: "/src/assets/Banner/25.jpg" },
-  { id: 410, title: "Modern Track Lighting", price: "$230", image: "/src/assets/Banner/26.jpg" },
-  { id: 411, title: "Luxury Crystal Chandelier", price: "$420", image: "/src/assets/Banner/27.jpg" },
-  { id: 412, title: "Minimal Bedside Lamp", price: "$85", image: "/src/assets/Banner/28.jpg" },
+  { id: 409, title: "Scandinavian Pendant Lamp", price: "$150", image: light9 },
+  { id: 410, title: "Modern Track Lighting", price: "$230", image: light10 },
+  { id: 411, title: "Luxury Crystal Chandelier", price: "$420", image: light11 },
+  { id: 412, title: "Minimal Bedside Lamp", price: "$85", image: light12 },
 
-  { id: 413, title: "Contemporary Ceiling Lamp", price: "$190", image: "/src/assets/Banner/29.jpg" },
-  { id: 414, title: "Designer Table Lamp", price: "$135", image: "/src/assets/Banner/30.jpg" },
-  { id: 415, title: "Outdoor Garden Light", price: "$170", image: "/src/assets/Banner/31.jpg" },
-  { id: 416, title: "Smart LED Ceiling Light", price: "$260", image: "/src/assets/Banner/32.jpg" },
+  { id: 413, title: "Contemporary Ceiling Lamp", price: "$190", image: light13 },
+  { id: 414, title: "Designer Table Lamp", price: "$135", image: light14 },
+  { id: 415, title: "Outdoor Garden Light", price: "$170", image: light15 },
+  { id: 416, title: "Smart LED Ceiling Light", price: "$260", image: light16 },
 
 ];
 

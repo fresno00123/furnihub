@@ -1,86 +1,98 @@
 import { useCart } from "../../context/CartContext";
-
+import shop1 from "/src/assets/Banner/k.jpg"
+import shop2 from "/src/assets/Banner/15.jpg"
+import shop3 from "/src/assets/Banner/40.jpg"
+import shop4 from "/src/assets/Banner/b.jpg"
+import shop5 from "/src/assets/Banner/h.jpg"
+import shop6 from "/src/assets/Banner/16.jpg"
+import shop7 from "/src/assets/Banner/10.jpg"
+import shop8 from "/src/assets/Banner/42.jpg"
+import shop9 from "/src/assets/Banner/g.jpg"
+import shop10 from "/src/assets/Banner/h.jpg"
+import shop11 from "/src/assets/Banner/q.jpg"
+import shop12 from "/src/assets/Banner/15.jpg"
+import shop13 from "/src/assets/Banner/41.jpg"
 const products = [
   {
     id: 1,
     title: "Modern Chair",
     price: "$120",
-    image: "/src/assets/Banner/k.jpg",
+    image: shop1,
   },
   {
     id: 2,
     title: "Wooden Table",
     price: "$250",
-    image: "/src/assets/Banner/15.jpg",
+    image: shop2,
   },
   {
     id: 3,
     title: "Comfort Sofa",
     price: "$400",
-    image: "/src/assets/Banner/40.jpg",
+    image: shop3,
   },
  
   {
-    id: 5,
+    id: 4,
     title: "Office Chair",
     price: "$180",
-    image: "/src/assets/Banner/b.jpg",
+    image: shop4,
   },
   {
-    id: 6,
+    id: 5,
     title: "Dining Chair",
     price: "$95",
-   image: "/src/assets/Banner/h.jpg",
+   image: shop5,
    },
   {
-    id: 7,
+    id: 6,
     title: "Study Desk",
     price: "$220",
-    image: "/src/assets/Banner/16.jpg",
-  },
+    image: shop6,
+  },  
   {
-    id: 8,
+    id: 7,
     title: "Coffee Table",
     price: "$160",
-    image: "/src/assets/Banner/10.jpg",
+    image: shop7,
   },
  
   {
-    id: 10,
+    id: 8,
     title: "Recliner Sofa",
     price: "$520",
-    image: "/src/assets/Banner/42.jpg",
+    image: shop8,
   },
   
   {
-    id: 14,
+    id:9,
     title: "Accent Chair",
     price: "$210",
-    image: "/src/assets/Banner/g.jpg",
+    image: shop9,
   },
   {
-    id: 15,
+    id: 10,
     title: "Bar Stool",
     price: "$85",
-    image: "/src/assets/Banner/h.jpg",
+    image: shop10,
   },
   {
-    id: 16,
+    id: 11,
     title: "Lounge Chair",
     price: "$275",
-    image: "/src/assets/Banner/q.jpg",
+    image: shop11,
   },
   {
-    id: 17,
+    id: 12,
     title: "Wooden Bench",
     price: "$140",
-    image: "/src/assets/Banner/15.jpg",
+    image: shop12,
   },
   {
-    id: 18,
+    id: 13,
     title: "Corner Sofa",
     price: "$780",
-    image: "/src/assets/Banner/41.jpg",
+    image: shop13,
   },
 ];
 

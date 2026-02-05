@@ -4,7 +4,10 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { ShoppingCart } from "lucide-react";
 import { useCart } from "../context/CartContext";
-
+import feature1 from "/src/assets/Banner/17.jpg"
+import feature2 from "/src/assets/Banner/5.jpg"
+import feature3 from "/src/assets/Banner/6.jpg"
+import feature4 from "/src/assets/Banner/72.jpg"  
 const Features = () => {
   const {addToCart} = useCart();
   const features = [
@@ -12,26 +15,26 @@ const Features = () => {
             title: 'Modern Pendant Light',
             status: 'Sales',
             price: '$120',
-            image: '/src/assets/Banner/17.jpg',
+            image: feature1,
       currentPrice: '$200',
     },
     {
             title: 'Glass Center Table',
             status: 'Sales',
             price: '$260',
-            image: '/src/assets/Banner/5.jpg',
+            image: feature2,
     },
     {
           title: 'Round Dining Table',
             status: 'Sales',
             price: '$390',
-            image: "/src/assets/Banner/6.jpg",
+            image: feature3,
     },
     {
             title: 'Minimal Wooden Bed',
             status: 'Sales',
             price: '$550',
-            image: '/src/assets/Banner/72.jpg',
+            image: feature4,
       currentPrice: '$520',
     },
   ];

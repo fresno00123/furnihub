@@ -2,7 +2,30 @@ import { useState } from "react";
 import SectionTitle from "../../component/SectionTitle";
 import { ShoppingCart } from "lucide-react";
 import { useCart } from "../../context/CartContext";
-
+import product1 from "/src/assets/products/product_5.png"
+import product2 from "/src/assets/Banner/57.jpg"
+import product3 from "/src/assets/Banner/64.jpg"
+import product4 from "/src/assets/Banner/5.jpg"
+import product5 from "/src/assets/Banner/9.jpg"
+import product6 from "/src/assets/Banner/c.jpg"
+import product7 from "/src/assets/Banner/72.jpg"
+import product8 from "/src/assets/products/product_8.png"
+import product9 from "/src/assets/Banner/64.jpg"
+import product10 from "/src/assets/Banner/m.jpg"
+import product11 from "/src/assets/Banner/17.jpg"
+import product12 from "/src/assets/Banner/22.jpg"
+import product13 from "/src/assets/Banner/58.jpg"
+import product14 from "/src/assets/Banner/a.jpg"
+import product15 from "/src/assets/Banner/d.jpg"
+import product16 from "/src/assets/Banner/68.jpg"
+import product17 from "/src/assets/Banner/10.jpg"
+import product18 from "/src/assets/Banner/59.jpg"
+import product19 from "/src/assets/Banner/60.jpg"
+import product20 from "/src/assets/Banner/66.jpg"
+import product21 from "/src/assets/Banner/13.jpg"
+import product22 from "/src/assets/Banner/15.jpg"
+import product23 from "/src/assets/Banner/12.jpg"
+import product24 from "/src/assets/Banner/6.jpg"
 const Product = () => {
     const {addToCart} = useCart();
     const [active, setActive] = useState({
@@ -40,7 +63,7 @@ const Product = () => {
             title: 'Night Lamp',
             status: 'New',
             price: '$80',
-            image: '/src/assets/products/product_5.png',
+            image: product1,
             currentPrice: '$100',
             product: 'newest',
         },
@@ -48,14 +71,14 @@ const Product = () => {
             title: 'Modern Queen Bed',
             status: 'Sales',
             price: '$580',
-            image: '/src/assets/Banner/57.jpg',
+            image: product2,
             product: 'newest',
         },
         {
             title: 'Deluxe Queen Bed',
             status: 'New',
             price: '$610',
-            image: '/src/assets/Banner/64.jpg',
+            image: product3,
             currentPrice: '$600',
             product: 'newest',
         },
@@ -63,7 +86,7 @@ const Product = () => {
             title: 'Glass Center Table',
             status: 'Sales',
             price: '$260',
-            image: '/src/assets/Banner/5.jpg',
+            image: product4,
             product: 'newest',
         },
 
@@ -71,14 +94,14 @@ const Product = () => {
             title: 'Office Work Desk',
             status: 'Sales',
             price: '$280',
-            image: '/src/assets/Banner/9.jpg',
+            image: product5,
             product: 'trending',
         },
         {
             title: 'Classic Wooden Chair',
             status: 'New',
             price: '$180',
-            image: '/src/assets/Banner/c.jpg',
+            image: product6,
             currentPrice: '$200',
             product: 'trending',
         },
@@ -86,21 +109,21 @@ const Product = () => {
             title: 'Minimal Wooden Bed',
             status: 'Sales',
             price: '$550',
-            image: '/src/assets/Banner/72.jpg',
+            image: product7,
             product: 'trending',
         },
         {
             title: 'Premium Designer Bed',
             status: 'Sales',
             price: '$980',
-            image: '/src/assets/products/product_8.png',
+            image: product8,
             product: 'trending',
         },
         {
             title: 'Modern Storage King Bed',
             status: 'New',
             price: '$900',
-            image: '/src/assets/Banner/64.jpg',
+            image: product9,
             currentPrice: '$200',
             product: 'best_seller',
         },
@@ -108,105 +131,105 @@ const Product = () => {
             title: 'Scandinavian Chair',
             status: 'Sales',
             price: '$175',
-            image: '/src/assets/Banner/m.jpg',
+            image: product10,
             product: 'best_seller',
         },
         {
             title: 'Modern Pendant Light',
             status: 'Sales',
             price: '$120',
-            image: '/src/assets/Banner/17.jpg',
+            image: product11,
             product: 'best_seller',
         },
         {
             title: 'Industrial Hanging Light',
             status: 'Sales',
             price: '$200',
-            image: '/src/assets/Banner/22.jpg',
+            image: product12,
             product: 'best_seller',
         },
         {
             title: 'Elegant Guest Room Bed',
             status: 'Sales',
             price: '$480',
-            image: '/src/assets/Banner/58.jpg',
+            image: product13,
             product: 'featured',
         },
         {
             title: 'Comfort Stool Chair',
             status: 'Sales',
             price: '$150',
-            image: '/src/assets/Banner/a.jpg',
+            image: product14,
             product: 'featured',
         },
         {
             title: 'Luxury Lounge Chair',
             status: 'Sales',
             price: '$220',
-            image: '/src/assets/Banner/d.jpg',
+            image: product15,
             product: 'featured',
         },
         {
             title: 'Designer Bed Set',
             status: 'Sales',
             price: '$930',
-            image: '/src/assets/Banner/68.jpg',
+            image: product16,
             product: 'featured',
         },
         {
             title: 'Compact Laptop Table',
             status: 'Sales',
             price: '$160',
-            image: "/src/assets/Banner/10.jpg",
+            image: product17,
             product: 'all',
         },
         {
             title: 'Minimal Platform Bed',
             status: 'Sales',
             price: '$480',
-            image: '/src/assets/Banner/59.jpg',
+            image: product18,
             product: 'all',
         },
         {
             title: 'Upholstered Bed Frame',
             status: 'Sales',
             price: '$720',
-            image: '/src/assets/Banner/60.jpg',
+            image: product19,
             product: 'all',
         },
         {
             title: 'Modern King Platform Bed',
             status: 'Sales',
             price: '$250',
-            image: '/src/assets/Banner/66.jpg',
+            image: product20,
             product: 'all',
         },
         {
             title: "Scandinavian Table",
             status: 'Sales',
             price: '$370',
-            image:  "/src/assets/Banner/13.jpg",
+            image:  product21,
             product: 'all',
         },
         {
             title: "Marble Coffee Table",
             status: 'Sales',
             price: '$420',
-            image: "/src/assets/Banner/15.jpg",
+            image: product22,
             product: 'all',
         },
         {
             title: "Luxury Conference Table",
             status: 'Sales',
             price: '$620',
-            image: "/src/assets/Banner/12.jpg",
+            image: product23,
             product: 'all',
         },
         {
             title: 'Round Dining Table',
             status: 'Sales',
             price: '$390',
-            image: "/src/assets/Banner/6.jpg",
+            image: product24,
             product: 'all',
         },
 
