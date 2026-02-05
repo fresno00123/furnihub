@@ -3,28 +3,32 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import SectionTitle from "./SectionTitle";
 // import { Pause } from "lucide-react";
+import Cat1 from "/src/assets/categories/categories_1.png"
+import Cat2 from "/src/assets/categories/categories_2.png"
+import Cat3 from "/src/assets/categories/categories_3.png"
+import Cat4 from "/src/assets/categories/categories_4.png"
 
 const Categories = () => {
   const categories = [
     {
       title: "Wing Chair",
       products: "3,584 Products",
-      image: "/src/assets/categories/categories_1.png",
+      image: Cat1,
     },
     {
       title: "Wooden Chair",
       products: "157 Products",
-      image: "/src/assets/categories/categories_2.png",
+      image: Cat2,
     },
     {
       title: "Desk Chair",
       products: "154 Products",
-      image: "/src/assets/categories/categories_3.png",
+      image: Cat3,
     },
     {
       title: "Park Bench",
       products: "154 Products",
-      image: "/src/assets/categories/categories_4.png",
+      image: Cat4,
     },
   ];
 
