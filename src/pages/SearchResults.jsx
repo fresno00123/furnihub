@@ -23,7 +23,7 @@ const SearchResults = () => {
           {results.map((product) => (
             <div key={product.id} className="bg-white p-4 rounded-xl shadow">
               <img
-                src={product.image || "/src/assets/products/default.png"}
+                src={product.image || "../assets/products/default.png"}
                 alt={product.name}
                 className="h-44 w-full object-cover rounded-lg mb-4"
               />
