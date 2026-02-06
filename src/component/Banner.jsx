@@ -72,7 +72,7 @@ const Banner = () => {
                   <Link to="/product">
                   <button className="mx-auto md:mx-0 max-w-[140px] sm:max-w-[160px] lg:max-w-[171px] w-full h-[44px] sm:h-[48px] lg:h-[52px] bg-[#029fae] rounded-lg capitalize text-white flex items-center justify-center gap-2 hover:bg-gray-400 transition">
                     shop now
-                    to
+                  
                     <MoveRight size={18} />
                   </button>
                   </Link>
