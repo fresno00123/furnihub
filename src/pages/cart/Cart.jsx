@@ -22,16 +22,25 @@ const Cart = () => {
             {cart.map((item, index) => (
               <div
                 key={index}
-                className="flex justify-between items-center bg-white p-4 rounded-lg shadow"
+                className="flex gap-4 justify-between items-center bg-white p-4 rounded-lg shadow"
               >
-                <div>
-                  <h2 className="font-semibold">{item.title || item.name}</h2>
-                  <p>{item.price}</p>
+                <div className="flex gap-4 items-center flex-1">
+                  {item.image && (
+                    <img
+                      src={item.image}
+                      alt={item.title || item.name}
+                      className="w-24 h-24 object-cover rounded-lg"
+                    />
+                  )}
+                  <div>
+                    <h2 className="font-semibold">{item.title || item.name}</h2>
+                    <p>{item.price}</p>
+                  </div>
                 </div>
 
                 <button
                   onClick={() => removeFromCart(index)}
-                  className="text-red-500 font-medium cursor-pointer"
+                  className="text-red-500 font-medium cursor-pointer whitespace-nowrap ml-4"
                 >
                   Remove
                 </button>
