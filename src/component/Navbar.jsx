@@ -14,7 +14,6 @@ import { useCart } from '../context/CartContext';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { useSearch } from '../context/SearchContext';
 import { products } from '../Data/products';
-import { use } from 'react';
 
 function Navbar() {
   const[open,setOpen]=useState(false);
